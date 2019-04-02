@@ -78,9 +78,7 @@ public class MessageActivity extends AppCompatActivity {
         btn_send = findViewById(R.id.btn_send);
         text_send = findViewById(R.id.text_send);
 
-
         intent = getIntent();
-
         final String userid = intent.getStringExtra("userid");
         fuser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -88,7 +86,7 @@ public class MessageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String msg =  text_send.getText().toString();
-                if (msg.equals("")){
+                if (!msg.equals("")){
                     sendMessage(fuser.getUid(), userid, msg);
 
                 }else {
@@ -138,7 +136,7 @@ public class MessageActivity extends AppCompatActivity {
         reference.child("Chats").push().setValue(hashMap);
     }
 
-    private void readMessages (final String myid, final String useid, final String imageurl){
+    private void readMessages (final String myid, final String userid, final String imageurl){
         mChat = new ArrayList<>();
 
         reference =FirebaseDatabase.getInstance().getReference("Chats");
@@ -148,10 +146,10 @@ public class MessageActivity extends AppCompatActivity {
                 mChat.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Chat chat = dataSnapshot.getValue(Chat.class);
-                    if (chat.getReceiver().equals(myid) && chat.getSender().equals(useid)  ||
-                            chat.getReceiver().equals(useid) && chat.getSender().equals(myid)){
+                    if (chat.getReceiver().equals(myid) && chat.getSender().equals(userid)  ||
+                            chat.getReceiver().equals(userid) && chat.getSender().equals(myid)){
                         mChat.add(chat);
-                    }
+                         }
 
                     messageAdapter = new MessageAdapter(MessageActivity.this, mChat, imageurl);
                     recyclerView.setAdapter(messageAdapter);
