@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "654186027893",
+    "firebase_url": "https://lionschat-f3f5e.firebaseio.com",
+    "project_id": "lionschat-f3f5e",
+    "storage_bucket": "lionschat-f3f5e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654186027893:android:02e3148a83dd280e",
+        "android_client_info": {
+          "package_name": "com.example.lionschat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "654186027893-71u8bed6loqqiaee01i5q7116l8tq41j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lionschat",
+            "certificate_hash": "28e3777ebf6d53a164790a51a9005d7e3b654b15"
+          }
+        },
+        {
+          "client_id": "654186027893-uctbvmvp4gckflhsvuplg2cmogvft5m7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL_fNrcoIEKzX9sPOqi7cVogq54v8pEHg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654186027893-uctbvmvp4gckflhsvuplg2cmogvft5m7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
